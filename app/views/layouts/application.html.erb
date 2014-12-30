@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Merchant</title>
+  <title>FoodStore - Product <%= controller.action_name %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="wrapper">
+    <div class="header">
+      <h1>FoodStore</h1>
+      <p>
+         Your Food Items
+      </p>
+    </div>
+  </div>
+  <p style="color: green"><%= flash[:notice] %>
+  </p>
 
-<%= yield %>
+  <div class="sidebar">
+    (sidebar)
+  </div>
+  <div class="main">
+    <%= yield %>
+  </div>
+
+  <div class="footer">
+    FoodStore Online <br/>
+    A Rails Jumpstart Project
+  </div>
+
 
 </body>
 </html>
